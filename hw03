@@ -1,1 +1,36 @@
 
+from fractions import Fraction 
+F=Fraction
+class Numbers(object):
+    def _init_(self,a,b,c,d):
+        self.a=a
+        self.b=b
+        self.c=c
+        self.d=d
+    def count(self):
+        print(F(self.a,self.b)+F(self.c,self.d))
+    def subtract(self):
+        print(F(self.a,self.b)-F(self.c,self.d))
+    def plus(self):
+        print(F(self.a,self.b)*F(self.c,self.d))
+    def divide(self): 
+        print(F(self.a,self.b)/F(self.c,self.d))   
+
+Number=Numbers()
+print('这是一个两分数四则运算的py程序')
+Number.a=int(input('第一个分数的分子a:'))
+Number.b=int(input('第一个分数的分母b:'))
+Number.c=int(input('第二个分数的分子c:'))
+Number.d=int(input('第二个分数的分母d:'))
+way=int(input('输入你的运算方式,0:相加,1：相减,2：相乘,3：相除'))
+
+if way==0:
+    Number.count()
+elif way==1:
+    Number.subtract()
+elif way==2:
+    Number.plus()
+elif way==3:     
+    Number.divide()
+else:
+    print('Error')
